@@ -1,4 +1,4 @@
-# Flutter Web Fullscreen App
+# Flutter Sample Web App
 
 This is a Flutter web project that demonstrates:
 - **Dynamic Image Display:** Enter a URL to load an image.
@@ -38,5 +38,5 @@ This is a Flutter web project that demonstrates:
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/<your-username>/flutter_web_fullscreen_app.git](https://github.com/harshshambhuwani/flutter-sample-web-app.git)
-   cd flutter_web_fullscreen_app
+   git clone https://github.com/harshshambhuwani/flutter-sample-web-app.git
+   cd flutter-sample-web-app
