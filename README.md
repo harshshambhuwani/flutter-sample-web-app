@@ -1,5 +1,5 @@
 # Flutter Sample Web App
-**Dynamic Image Display:** https://harshshambhuwani.github.io/flutter-sample-web-app/
+**App Link:** https://harshshambhuwani.github.io/flutter-sample-web-app/
 
 
 This is a Flutter web project that demonstrates:
