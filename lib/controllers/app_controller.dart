@@ -7,7 +7,7 @@ import '../utils/fullscreen_util.dart';
 class AppController extends GetxController {
   /// The URL of the image to display.
   var imageUrl = ''.obs;
-
+  final isFullscreen = false.obs;
   /// A unique view ID for the registered HTML view.
   var imageViewId = ''.obs;
 
@@ -34,8 +34,8 @@ class AppController extends GetxController {
         // Create an HtmlElementView with the registered view type.
         htmlImageView = SizedBox(
 
-          width: 300,
-          height: 300,
+          width: Get.width * 0.5,
+          height: Get.height * 0.5,
           child: HtmlElementView(
             viewType: imageViewId.value,
           ),
@@ -56,11 +56,22 @@ class AppController extends GetxController {
 
   /// Calls the platform-specific function to enter fullscreen mode.
   void enterFullscreenAction() {
+    isFullscreen(true);
     enterFullscreen();
   }
 
   /// Calls the platform-specific function to exit fullscreen mode.
   void exitFullscreenAction() {
-    exitFullscreen();
+    if(isFullscreen.value){
+      isFullscreen(false);
+      exitFullscreen();
+    }else{
+      Get.defaultDialog(
+        title: "Alert",
+        middleText: "Already in normal mode!",
+        textConfirm: "OK",
+        onConfirm: () => Get.back(),
+      );
+    }
   }
 }
